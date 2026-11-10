@@ -1,0 +1,14 @@
+.gitignore
+  h_fc41b4b1f628c8 1-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5cb41ea421a84b74f49977f372ba65029ab2a882",
+  "prompts": {},
+  "humans": {
+    "h_fc41b4b1f628c8": {
+      "author": "jerintxy <tanxinyijerin@gmail.com>"
+    }
+  }
+}
