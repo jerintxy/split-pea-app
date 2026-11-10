@@ -1,0 +1,64 @@
+## #############################
+## macOS Specific (Finder files)
+## #############################
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+
+
+## #############################
+## Xcode / Swift / UIKit Specific
+## #############################
+# User-specific settings (window layouts, open files) that shouldn't be shared
+xcuserdata/
+*.xcuserstate
+
+
+# Xcode architecture and build artifacts
+build/
+DerivedData/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager (SPM) build artifacts
+.build/
+
+
+## #############################
+## Cursor / VS Code Specific
+## #############################
+.vscode/
+.history/
+*.log
+
+
+## #############################
+## Xcode Additional Files
+## #############################
+
+# Xcode project user interface state
+*.xcuserdatad/
+
+# Xcode playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift generated documentation
+*.swiftdoc
+*.swiftmodule
+*.swiftdoc
+*.swiftinterface
+
+# Archives and exported applications
+*.xcarchive
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Temporary files
+*.tmp
+*.temp
