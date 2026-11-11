@@ -1,0 +1,32 @@
+split-pea-app/Core/ExpenseGroup.swift
+  h_fc41b4b1f628c8 10-11,14,19,26-27
+split-pea-app/Modules/Home/HomeContracts.swift
+  h_fc41b4b1f628c8 45-46
+split-pea-app/Modules/Home/HomePresenter.swift
+  h_fc41b4b1f628c8 22-24,60,66
+split-pea-app/Modules/Home/HomeRouter.swift
+  h_fc41b4b1f628c8 9-13
+split-pea-app/Modules/NewGroup/NewGroupBuilder.swift
+  h_fc41b4b1f628c8 1-22
+split-pea-app/Modules/NewGroup/NewGroupContracts.swift
+  h_fc41b4b1f628c8 1-59
+split-pea-app/Modules/NewGroup/NewGroupInteractor.swift
+  h_fc41b4b1f628c8 1-59
+split-pea-app/Modules/NewGroup/NewGroupPresenter.swift
+  h_fc41b4b1f628c8 1-112
+split-pea-app/Modules/NewGroup/NewGroupRouter.swift
+  h_fc41b4b1f628c8 1-18
+split-pea-app/Modules/NewGroup/NewGroupViewController.swift
+  h_fc41b4b1f628c8 1-336
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "38d17de9b406d3e2ad3be3cbebc75e77831542b9",
+  "prompts": {},
+  "humans": {
+    "h_fc41b4b1f628c8": {
+      "author": "jerintxy <tanxinyijerin@gmail.com>"
+    }
+  }
+}
