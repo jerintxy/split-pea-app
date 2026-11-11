@@ -12,7 +12,8 @@ final class WelcomeRouter: WelcomeRouterProtocol {
     func showHome(name: String) {
         guard let window else { return }
         // Temporary placeholder. Swap for HomeBuilder.build(...) once the Home module exists.
-        let home = UINavigationController(rootViewController: HomePlaceholderViewController(name: name))
+        //let home = UINavigationController(rootViewController: HomePlaceholderViewController(name: name))
+        let home = UINavigationController(rootViewController: HomeBuilder.build())
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve) {
             window.rootViewController = home
         }

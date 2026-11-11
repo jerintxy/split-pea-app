@@ -3,6 +3,8 @@ import UIKit
 /// One list row: optional leading view (avatar), title with optional subtitle, optional trailing view.
 /// Put rows inside a `CardView` with `card.addRow(...)`.
 final class RowView: UIView {
+    
+    var onTap: (() -> Void)?
 
     init(title: String,
          subtitle: String? = nil,
@@ -58,8 +60,12 @@ final class RowView: UIView {
             row.leadingAnchor.constraint(equalTo: leadingAnchor, constant: AppSpacing.l),
             row.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -AppSpacing.l)
         ])
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError("init(coder:) is not used") }
+    
+    @objc private func handleTap() { onTap?() }
 }
