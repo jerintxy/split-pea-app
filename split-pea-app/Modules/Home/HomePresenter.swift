@@ -19,9 +19,9 @@ final class HomePresenter: HomePresenterProtocol {
     }
 
     func addGroupTapped() {
-        // TEMPORARY: adds a sample group. The New group screen will replace this.
-        interactor.addSampleGroup()
-        refresh()
+        router.showNewGroup { [weak self] in
+            self?.refresh()
+        }
     }
 
     func groupSelected(id: UUID) {
@@ -57,12 +57,13 @@ final class HomePresenter: HomePresenterProtocol {
         if let symbol = group.foreignSymbol {
             subtitle += " · Trip in \(symbol)"
         }
+        let defaultIcon = group.foreignCurrencyCode == nil ? "person.2" : "airplane"
         let balance = summary.balanceCents
         return GroupRowModel(
             id: group.id,
             title: group.name,
             subtitle: subtitle,
-            iconName: group.foreignCurrencyCode == nil ? "person.2.fill" : "airplane",
+            iconName: group.iconName ?? defaultIcon,
             amountText: balance == 0 ? "Settled up" : MoneyFormat.signedSGD(cents: balance),
             tone: tone(for: balance)
         )

@@ -39,10 +39,10 @@ protocol HomePresenterProtocol: AnyObject {
 protocol HomeInteractorProtocol: AnyObject {
     func userName() -> String
     func loadSummaries() -> [GroupSummary]
-    /// TEMPORARY: adds a sample group so you can see the list. Replaced by the New group module.
-    func addSampleGroup()
 }
 
 protocol HomeRouterProtocol: AnyObject {
+    /// Opens New group. `onCreated` runs after a group is saved, so Home can refresh.
+    func showNewGroup(onCreated: @escaping () -> Void)
     func showGroup(id: UUID, name: String)
 }

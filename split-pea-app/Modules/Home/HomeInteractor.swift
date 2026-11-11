@@ -20,15 +20,4 @@ final class HomeInteractor: HomeInteractorProtocol {
         // Once expenses exist, this is where each group's balance gets worked out.
         repository.allGroups().map { GroupSummary(group: $0, balanceCents: 0) }
     }
-
-    func addSampleGroup() {
-        let samples: [(String, [String], String?)] = [
-            ("Japan trip", ["John", "Julie", "Ethan", "Alice"], "JPY"),
-            ("Uni friends", ["John", "Julie", "Ethan", "Alice"], nil),
-            ("Flatmates", ["John", "Julie", "Ethan"], nil),
-            ("Hawker night", ["John", "Julie", "Ethan", "Alice"], nil)
-        ]
-        let next = samples[repository.allGroups().count % samples.count]
-        repository.add(ExpenseGroup(name: next.0, memberNames: next.1, foreignCurrencyCode: next.2))
-    }
 }
